@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:ideabook/app/app.bottomsheets.dart';
 import 'package:ideabook/app/app.dialogs.dart';
 import 'package:ideabook/app/app.locator.dart';
@@ -19,16 +20,17 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final textTheme = Theme.of(context).textTheme;
     return MaterialApp(
       title: 'Flutter Demo',
       theme: Theme.of(context).copyWith(
         primaryColor: kcBackgroundColor,
         focusColor: kcPrimaryColor,
-        textTheme: Theme.of(context).textTheme.apply(
-              bodyColor: Colors.black,
-            ),
+        textTheme: GoogleFonts.latoTextTheme(textTheme).apply(
+          bodyColor: Colors.black,
+        ),
       ),
-      initialRoute: Routes.startupView,
+      initialRoute: Routes.notesView,
       onGenerateRoute: StackedRouter().onGenerateRoute,
       navigatorKey: StackedService.navigatorKey,
       navigatorObservers: [
