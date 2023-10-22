@@ -15,8 +15,8 @@ class SendButton extends StatelessWidget {
     return InkWell(
       onTap: disable ? null : onTap,
       child: Container(
-        height: 38,
-        width: 38,
+        height: 34,
+        width: 34,
         decoration: BoxDecoration(
           color: disable ? Colors.transparent : const Color(0xFF3E4370),
           borderRadius: BorderRadius.circular(50),

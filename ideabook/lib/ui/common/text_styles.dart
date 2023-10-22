@@ -14,3 +14,11 @@ const kBodyTS = TextStyle(
   fontFamily: 'Inter',
   fontWeight: FontWeight.w400,
 );
+
+const kDateTS = TextStyle(
+  color: Color(0xFFB2B1B1),
+  fontSize: 10,
+  fontFamily: 'Inter',
+  fontWeight: FontWeight.w400,
+  height: 0,
+);
